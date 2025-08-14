@@ -13,7 +13,12 @@ public class Coche {
   //metodos(acciones)
   void acelerar() {
   velocidad +=10;
+---
+  int a = 5;
+int b = 7;
 
+System.out.println("La suma es: " + (a + b));
+---
       operador ternario o condicional
         // (condicion)?valor1:valor2
         //int a=2>3?1:2;
