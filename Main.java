@@ -176,6 +176,40 @@ public class Main {
 
         */
 
+        // ejercicio 12
+        // promedio de un arreglo de números enteros.
+        // Realizar variantes con arreglos ya inicializados e ingreso por teclado.
+        int [] arregloDeNumerosXTeclado = new int[5];
+        int [] arregloInicializado = {7,7,7,7,7};
+
+        // Cargar arreglo por teclado
+        for (int i = 0; i < arregloDeNumerosXTeclado.length; i++) {
+            System.out.print("Ingrese el número para la posición " + i + ": ");
+            arregloDeNumerosXTeclado[i] = scanner.nextInt();
+            scanner.nextLine();
+        }
+
+        // Mostrar arreglo ingresado
+        System.out.println("Arreglo cargado desde teclado:");
+        for (int i = 0; i < arregloDeNumerosXTeclado.length; i++) {
+            System.out.println("Posición " + i + ": " + arregloDeNumerosXTeclado[i]);
+        }
+
+        // Mostrar arreglo inicializado
+        System.out.println("\nArreglo inicializado por código:");
+        for (int i = 0; i < arregloInicializado.length; i++) {
+            System.out.println("Posición " + i + ": " + arregloInicializado[i]);
+        }
+
+        int totalArreglo2 = 0;
+        for(int i = 0; i < arregloInicializado.length ; i++) {
+            totalArreglo2 += arregloInicializado[i];
+        }
+        int promedioArreglo2 =0;
+        promedioArreglo2=totalArreglo2/arregloInicializado.length;
+        System.out.println("total del arrego :" + totalArreglo2);
+        System.out.println("promedio del arreglo : " + promedioArreglo2);
+
     }
 }
 
