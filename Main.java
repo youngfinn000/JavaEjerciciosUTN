@@ -150,16 +150,31 @@ public class Main {
         }
         */
         //ejercicio 11
-        
 
+        /*
+        System.out.println("ingrese su nombre:");
+        String nombre = scanner.nextLine();
+        System.out.println("ingrese su edad:");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("ingrese su salario:");
+        int salario = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Nombre : "+ nombre);
+        System.out.println("Edad : " + edad);
+        if(edad < 16) {
+            System.out.println("no tiene edad para trabajar");
+        } else if (edad >= 16 && edad <=18) {
+            System.out.println("Salario : " + salario);
+        } else if (edad >= 19 && edad <= 50) {
+            System.out.println("Salario : " + (salario += (salario/100)*5));
+        } else if (edad >= 51 && edad <= 60) {
+            System.out.println("Salario : " + (salario += (salario/100)*10));
+        }else {
+            System.out.println("Salario : " + (salario += (salario/100)*15));
+        }
 
-
-
-
-
-
-
-
+        */
 
     }
 }
