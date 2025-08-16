@@ -179,6 +179,7 @@ public class Main {
         // ejercicio 12
         // promedio de un arreglo de números enteros.
         // Realizar variantes con arreglos ya inicializados e ingreso por teclado.
+        /*
         int [] arregloDeNumerosXTeclado = new int[5];
         int [] arregloInicializado = {7,7,7,7,7};
 
@@ -209,6 +210,57 @@ public class Main {
         promedioArreglo2=totalArreglo2/arregloInicializado.length;
         System.out.println("total del arrego :" + totalArreglo2);
         System.out.println("promedio del arreglo : " + promedioArreglo2);
+
+         */
+
+        /*
+        // ejercicio 13
+        System.out.println("ingrese un numero: ");
+        int summaNaturales = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("suma de naturales hasta el num ingresado:");
+        int total = 0;
+        for (int i = 1; i <= summaNaturales; i++) {
+            System.out.println(total + "+" + i );
+           total += i;
+            System.out.println(total);
+        }
+         */
+        // ejercicio 14
+        //Realizar un programa Java que lea por teclado 20 temperaturas correspondientes a un mes
+        //y calcule el máximo, el mínimo y el promedio. Utilizar un array double.
+
+        double[] arregloTemperaturas = new double[10];
+        for (int i = 0; i < arregloTemperaturas.length; i++) {
+            System.out.println("ingrese una temperatura para la posicion [" + i + "]");
+            arregloTemperaturas[i] = scanner.nextDouble();
+        }
+        System.out.println("arreglo cargado ");
+        for (int i = 0; i < arregloTemperaturas.length; i++) {
+            System.out.print("[" + arregloTemperaturas[i] + "]");
+        }
+        System.out.println();
+
+        double maximo = arregloTemperaturas[0];
+        double minimo = arregloTemperaturas[0];
+        double promedio = 0;
+        double total = 0;
+
+        for (int i = 0; i < arregloTemperaturas.length; i++) {
+            total += arregloTemperaturas[i];
+            if (maximo < arregloTemperaturas[i]) {
+                maximo = arregloTemperaturas[i];
+            }
+            if (minimo > arregloTemperaturas[i]) {
+                minimo = arregloTemperaturas[i];
+            }
+
+        }
+
+        System.out.println("maximo: " + maximo + ",minimo: " + minimo + ",total: " + total);
+
+        promedio = total / (double) arregloTemperaturas.length;
+        System.out.println("promedio de temperaturas:" + promedio);
 
     }
 }
