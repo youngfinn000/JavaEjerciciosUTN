@@ -13,6 +13,7 @@ public class Empleado {
         this.apellido = apellido;
         this.salario = salario;
     }
+
     public Empleado() {
 
     }
@@ -35,19 +36,28 @@ public class Empleado {
     }
 
 
-
     /// METODOS
     public void nombreMetodo() {
 
     }
 
     public void calcularSalarioAnual(double salario) {
-        double salarioMensual = salario*12;
-        System.out.println("salario mensual estimado de: "+ salarioMensual);
+        double salarioMensual = salario * 12;
+        System.out.println("salario mensual estimado de: " + salarioMensual);
     }
 
-    public void aumentarSalarioPorPorcentaje(double porcentajeAaumentar){
-        salario=salario*double
+    public void aumentarSalarioPorPorcentaje(double porcentajeAaumentar) {
+        if (porcentajeAaumentar > 1) {
+            System.out.println("error: valor invalido");
+        } else {
+            System.out.println("salario sin aumento:" + salario);
+            salario = salario * porcentajeAaumentar;
+            System.out.println("salario con aumento del:" + porcentajeAaumentar + ":" + salario);
+        }
+    }
+
+    public void mostrarEmpleado(Empleado variable) {
+        System.out.print("Empleado["+variable.dni+"],"+"["+variable.nombre+"],"+"["+variable.apellido+"],"+"["+variable.salario+"]");
     }
 
 }
