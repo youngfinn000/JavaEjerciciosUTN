@@ -47,19 +47,21 @@ public class Empleado {
 
     }
 
-    public void calcularSalarioAnual() {
-        double salarioMensual = salario * 12;
-        System.out.println("salario mensual estimado de: " + salarioMensual);
+    public double calcularSalarioAnual() {
+        double salarioAnual = salario * 12;
+        System.out.println("salario anual estimado de: " + salarioAnual);
+        return  salarioAnual;
     }
 
-    public void aumentarSalarioPorPorcentaje(double porcentajeAaumentar) {
+    public String aumentarSalarioPorPorcentaje(double porcentajeAaumentar) {
+        String mensaje;
         if (porcentajeAaumentar > 1) {
-            System.out.println("error: valor invalido");
+            mensaje="error: valor invalido, ingrese un numero con coma entre 0 y 1";
         } else {
-            System.out.println("salario sin aumento:" + salario);
             salario += salario * porcentajeAaumentar;
-            System.out.println("salario con aumento del:" + porcentajeAaumentar + ":" + salario);
+           mensaje="salario incrementado";
         }
+        return mensaje;
     }
 
     public void cargarEmpleadoXConsola(){
@@ -75,9 +77,9 @@ public class Empleado {
         salario = scanner.nextDouble();
 
     }
-    public void mostrarEmpleado() {
-        System.out.print("Datos de empleado["+dni+"],"+"["+nombre+"],"+"["+apellido+"],"+"["+salario+"]");
-        System.out.println();
+    public String mostrarEmpleado() {
+        String texto ="Datos de empleado["+dni+"],"+"["+nombre+"],"+"["+apellido+"],"+"["+salario+"]\n";
+        return  texto;
     }
 
 }

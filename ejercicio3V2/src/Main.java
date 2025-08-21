@@ -1,21 +1,40 @@
+import Entities.BankAccount;
 import Entities.Empleado;
 
 public class Main {
     public static void main(String[] args) {
-        Empleado primero = new Empleado();
+        //1
         Empleado segundo = new Empleado();
-        segundo.cargarEmpleadoXConsola();
-        segundo.mostrarEmpleado();
+        //A
+        Empleado A = new Empleado("23.456.345", "Carlos", "Gutiérrez", 25000);
+        //B
+        Empleado B = new Empleado("34234123", "Ana", "Sánchez", 27500);
+        //segundo.cargarEmpleadoXConsola();
 
-        primero.setDni("45.444.444");
-        primero.setNombre("killua");
-        primero.setApellido("zzz");
-        primero.setSalario(1000.00);
+        //C
+        String mensajeA = A.mostrarEmpleado();
+        String mensajeB = B.mostrarEmpleado();
+        System.out.println(mensajeA + mensajeB);
+        //D
+        String mensajeD = A.aumentarSalarioPorPorcentaje(0.15);
+        System.out.println(mensajeD);
+        double salarioAnualA = A.calcularSalarioAnual();
+        //2
 
+        //C
+        BankAccount cuentaBanco01 = new BankAccount("01", "killua", 15000);
+        System.out.println("credit\n");
+        double balanceMain=cuentaBanco01.Credito(2500);
+        System.out.println(balanceMain);
+        System.out.println("debit\n");
+        balanceMain=cuentaBanco01.debito(1500);
+        System.out.println(balanceMain);
+        System.out.println("debit invalido\n");
+        balanceMain=cuentaBanco01.debito(30000);
+        System.out.println(balanceMain);
 
-        primero.mostrarEmpleado();
-        System.out.println();
-        primero.calcularSalarioAnual();
-        primero.aumentarSalarioPorPorcentaje(0.1);
+        String datos1 = cuentaBanco01.mostrarDatosBancarios();
+        System.out.println(datos1);
+
     }
 }
