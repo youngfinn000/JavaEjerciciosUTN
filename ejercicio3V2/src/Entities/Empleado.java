@@ -50,21 +50,21 @@ public class Empleado {
     public double calcularSalarioAnual() {
         double salarioAnual = salario * 12;
         System.out.println("salario anual estimado de: " + salarioAnual);
-        return  salarioAnual;
+        return salarioAnual;
     }
 
     public String aumentarSalarioPorPorcentaje(double porcentajeAaumentar) {
         String mensaje;
         if (porcentajeAaumentar > 1) {
-            mensaje="error: valor invalido, ingrese un numero con coma entre 0 y 1";
+            mensaje = "error: valor invalido, ingrese un numero con coma entre 0 y 1";
         } else {
             salario += salario * porcentajeAaumentar;
-           mensaje="salario incrementado";
+            mensaje = "salario incrementado";
         }
         return mensaje;
     }
 
-    public void cargarEmpleadoXConsola(){
+    public void cargarEmpleadoXConsola() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("carga de datos de un empleado:");
         System.out.println("ingrese el DNI del empleado ");
@@ -77,9 +77,10 @@ public class Empleado {
         salario = scanner.nextDouble();
 
     }
+
     public String mostrarEmpleado() {
-        String texto ="Datos de empleado["+dni+"],"+"["+nombre+"],"+"["+apellido+"],"+"["+salario+"]\n";
-        return  texto;
+        String texto = "Datos de empleado[" + dni + "]," + "[" + nombre + "]," + "[" + apellido + "]," + "[" + salario + "]\n";
+        return texto;
     }
 
 }

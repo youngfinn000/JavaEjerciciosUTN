@@ -2,9 +2,9 @@ package Entities;
 
 public class BankAccount {
     ///ATRIBUTOS
-    String id;
-    String nombre;
-    double balance;
+    private String id;
+    private String nombre;
+    private double balance;
 
     ///CONSTRUCTORES
 
